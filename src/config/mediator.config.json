@@ -1,0 +1,35 @@
+{
+    "urn": "urn:mediator:blutech_mediator",
+    "version": "1.0.0",
+    "name": "Database Mediator",
+    "description": "Openhim Database Mediator",
+    "defaultChannelConfig": [
+      {
+        "name": "Passthrough Database Mediator",
+        "urlPattern": "^/blutech$",
+        "routes": [
+          {
+            "name": "Passthrough Database Mediator Route",
+            "host": "blutech-mediator",
+            "path": "/",
+            "port": "3000",
+            "primary": true,
+            "type": "http"
+          }
+        ],
+        "allow": ["admin"],
+        "methods": ["GET", "POST"],
+        "type": "http"
+      }
+    ],
+    "endpoints": [
+      {
+        "name": "Passthrough Database Mediator Endpoint",
+        "host": "blutech-mediator",
+        "path": "/",
+        "port": "3000",
+        "primary": true,
+        "type": "http"
+      }
+    ]
+  }
